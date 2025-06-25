@@ -10,7 +10,10 @@ export const metadata: Metadata = {
   title: "Proofly - Rental Evaluations. Remotely. Securely.",
   description:
     "Book in-person viewings even when you're not there. Get verified property reports before you send deposits.",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: '/proofly.png',
+  },
 }
 
 export default function RootLayout({
