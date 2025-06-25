@@ -144,7 +144,7 @@ export function Footer() {
                   whileTap={{ scale: 0.95 }}
                 >
                   <a
-                    href="mailto:prooflyofficial@gmail.com"
+                    href="mailto:officialproofly@gmail.com"
                     className="group relative p-3 transition-all duration-300 hover:text-[#00D7A3] flex items-center"
                     aria-label="Email"
                   >
