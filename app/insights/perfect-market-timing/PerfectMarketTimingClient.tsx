@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, Clock, TrendingUp, Wifi, Shield, Smartphone } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { InsightArticles } from "@/components/ui/InsightArticles"
 
 export default function PerfectMarketTimingClient() {
   return (
@@ -63,7 +64,7 @@ export default function PerfectMarketTimingClient() {
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                   Proofly emerges at the intersection of three powerful trends that are reshaping how people live and
                   work. Housing affordability forces longer distance moves. Remote work enables location flexibility.
-                  Blockchain and fintech make trust programmable rather than assumed.
+                  Proofly's approach to trust and verification makes secure renting possible for everyone, no matter where they are.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   These aren't separate trends—they're interconnected forces that create both the need for our solution
@@ -123,12 +124,11 @@ export default function PerfectMarketTimingClient() {
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Fintech & Trust Technology</h4>
                       <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                        Blockchain, digital identity, and secure payment systems make it possible to create programmable
-                        trust between strangers across distances.
+                        Digital identity and secure payment systems, combined with Proofly's unique verification process, create trust between strangers across distances.
                       </p>
                       <div className="bg-white/60 dark:bg-gray-800/60 rounded-lg p-3">
                         <div className="text-sm text-gray-600 dark:text-gray-400">
-                          <strong>Impact:</strong> Provides the infrastructure to make remote verification trustworthy
+                          <strong>Impact:</strong> Provides the infrastructure to make remote verification trustworthy for Young Professionals, Landlords/Property Managers, Students, and Families.
                         </div>
                       </div>
                     </div>
@@ -209,7 +209,6 @@ export default function PerfectMarketTimingClient() {
             </div>
           </div>
 
-          {/* Back Navigation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

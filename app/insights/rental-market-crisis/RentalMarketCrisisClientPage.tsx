@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, AlertTriangle, TrendingDown, Users, DollarSign } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { InsightArticles } from "@/components/ui/InsightArticles"
 
 export default function RentalMarketCrisisClientPage() {
   return (
@@ -140,19 +141,19 @@ export default function RentalMarketCrisisClientPage() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Users className="w-5 h-5 text-[#00D7A3]" />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">International Students</span>
+                    <span className="text-sm text-gray-700 dark:text-gray-300">Young Professionals</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <TrendingDown className="w-5 h-5 text-[#00D7A3]" />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Remote Professionals</span>
+                    <span className="text-sm text-gray-700 dark:text-gray-300">Landlords / Property Managers</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <DollarSign className="w-5 h-5 text-[#00D7A3]" />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Property Investors</span>
+                    <span className="text-sm text-gray-700 dark:text-gray-300">Students</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <AlertTriangle className="w-5 h-5 text-[#00D7A3]" />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">First-time Renters</span>
+                    <span className="text-sm text-gray-700 dark:text-gray-300">Families</span>
                   </div>
                 </div>
               </motion.div>
@@ -189,6 +190,28 @@ export default function RentalMarketCrisisClientPage() {
               </Button>
             </Link>
           </motion.div>
+
+          {/* Featured Resources Header and Cards */}
+          <div className="mt-12 mb-16">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center">Featured Resources</h3>
+            <InsightArticles
+              articles={[
+                {
+                  image: "https://img.youtube.com/vi/6ZfR-5VYYUU/hqdefault.jpg",
+                  url: "https://www.youtube.com/watch?v=6ZfR-5VYYUU"
+                },
+                {
+                  image: "https://img.youtube.com/vi/LSKOfmrHfQ4/hqdefault.jpg",
+                  url: "https://www.youtube.com/watch?v=LSKOfmrHfQ4"
+                },
+                {
+                  image: "https://img.youtube.com/vi/8YpPItxqIcM/hqdefault.jpg",
+                  url: "https://www.youtube.com/watch?v=8YpPItxqIcM"
+                }
+              ]}
+              cardSize={{ width: 480, height: 300 }}
+            />
+          </div>
         </div>
       </section>
 

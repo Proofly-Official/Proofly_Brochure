@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, TrendingUp, Building, GraduationCap, Globe, BarChart3 } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { InsightArticles } from "@/components/ui/InsightArticles"
 
 export default function ScalableRentalSolutionsClientPage() {
   return (
@@ -200,7 +201,6 @@ export default function ScalableRentalSolutionsClientPage() {
             </div>
           </div>
 
-          {/* Back Navigation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

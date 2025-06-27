@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, Target, Users, CheckCircle, Star, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { InsightArticles } from "@/components/ui/InsightArticles"
 
 export default function ThirdPartyVerificationClientPage() {
   return (
@@ -212,7 +213,6 @@ export default function ThirdPartyVerificationClientPage() {
             </div>
           </div>
 
-          {/* Back Navigation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

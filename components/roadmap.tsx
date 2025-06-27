@@ -254,15 +254,15 @@ export function Roadmap() {
                   </h3>
                 </div>
 
-                {milestones[currentStep - 1].details ? (
+                {milestones[currentStep - 1] && milestones[currentStep - 1].details ? (
                   <ul className="list-disc pl-5 text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                    {milestones[currentStep - 1].details.map((detail, index) => (
+                    {milestones[currentStep - 1] && milestones[currentStep - 1].details && milestones[currentStep - 1].details.map((detail, index) => (
                       <li key={index}>{detail}</li>
                     ))}
                   </ul>
                 ) : (
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                    {milestones[currentStep - 1].description}
+                    {milestones[currentStep - 1] ? milestones[currentStep - 1].description : null}
                   </p>
                 )}
 
@@ -293,14 +293,6 @@ export function Roadmap() {
                           </motion.div>
                         ))}
                       </div>
-                    </div>
-
-                    <div className="flex justify-center">
-                      <Link href="/waitlist">
-                        <Button className="bg-[#00D7A3] hover:bg-[#00D7A3]/90 text-white px-8 py-4 text-lg rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                          Join the Waitlist
-                        </Button>
-                      </Link>
                     </div>
                   </div>
                 )}
@@ -389,14 +381,6 @@ export function Roadmap() {
                                 </div>
                               ))}
                             </div>
-                          </div>
-
-                          <div className="flex justify-center">
-                            <Link href="/waitlist">
-                              <Button className="bg-[#00D7A3] hover:bg-[#00D7A3]/90 text-white px-6 py-3 rounded-full font-medium transition-all duration-300">
-                                Join the Waitlist
-                              </Button>
-                            </Link>
                           </div>
                         </div>
                       )}

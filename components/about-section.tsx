@@ -71,7 +71,7 @@ export function AboutSection() {
     timing: {
       title: "Why Now",
       content:
-        "The timing is perfect. Housing affordability forces longer distance moves. Remote work enables location flexibility. Blockchain and fintech make trust programmable rather than assumed. Proofly sits at the intersection of these trends.",
+        "The timing is perfect. Housing affordability forces longer distance moves. Remote work enables location flexibility. Proofly's approach to trust and verification ensures that everyone—Young Professionals, Landlords/Property Managers, Students, and Families—can rent with confidence, no matter where they are.",
       icon: <Clock className="w-6 h-6 text-[#00D7A3]" />,
       color: "from-purple-500/20 to-pink-500/20",
       link: "/insights/perfect-market-timing",
@@ -114,7 +114,10 @@ export function AboutSection() {
                         : "#7c2d12, #a21caf"
               })`,
             }}
-            onClick={() => setSelectedCard(currentCarouselIndex)}
+            onClick={() => {
+              console.debug('[AboutSection] Center card clicked, opening modal for index', currentCarouselIndex);
+              setSelectedCard(currentCarouselIndex);
+            }}
           >
             {/* Animated Background Pattern */}
             <div className="absolute inset-0 opacity-10">
@@ -149,14 +152,20 @@ export function AboutSection() {
             </AnimatePresence>
 
             <div className="mt-auto relative z-10">
-              <Link href={Object.values(aboutCards)[currentCarouselIndex].link} className="no-underline">
-                <div className="bg-white/10 dark:bg-white/5 rounded-xl p-3 inline-flex items-center gap-2 mb-6 hover:bg-white/20 transition-colors duration-200">
-                  <span className="text-white text-sm">Read More</span>
-                  <div className="bg-white/20 rounded-full p-1">
-                    <ArrowRight className="w-4 h-4 text-white" />
-                  </div>
+              {/* 'Read More' area now only opens modal, not navigation */}
+              <div
+                className="bg-white/10 dark:bg-white/5 rounded-xl p-3 inline-flex items-center gap-2 mb-6 hover:bg-white/20 transition-colors duration-200 cursor-pointer"
+                onClick={e => {
+                  e.stopPropagation();
+                  console.debug('[AboutSection] Read More clicked, opening modal for index', currentCarouselIndex);
+                  setSelectedCard(currentCarouselIndex);
+                }}
+              >
+                <span className="text-white text-sm">Read More</span>
+                <div className="bg-white/20 rounded-full p-1">
+                  <ArrowRight className="w-4 h-4 text-white" />
                 </div>
-              </Link>
+              </div>
 
               <div className="bg-white/10 p-6 rounded-xl border border-white/20">
                 <div className="flex items-center gap-3 mb-3">
@@ -197,7 +206,10 @@ export function AboutSection() {
                           : "#f3e8ff, #e9d5ff"
                 })`,
               }}
-              onClick={() => setSelectedCard((currentCarouselIndex + 1) % 5)}
+              onClick={() => {
+                console.debug('[AboutSection] Top-right card clicked, opening modal for index', (currentCarouselIndex + 1) % 5);
+                setSelectedCard((currentCarouselIndex + 1) % 5);
+              }}
             >
               <AnimatePresence mode="wait">
                 <motion.div
@@ -244,7 +256,10 @@ export function AboutSection() {
                           : "#8b5cf6, #7c3aed"
                 })`,
               }}
-              onClick={() => setSelectedCard((currentCarouselIndex + 2) % 5)}
+              onClick={() => {
+                console.debug('[AboutSection] Bottom-right card clicked, opening modal for index', (currentCarouselIndex + 2) % 5);
+                setSelectedCard((currentCarouselIndex + 2) % 5);
+              }}
             >
               <AnimatePresence mode="wait">
                 <motion.div
@@ -359,12 +374,16 @@ export function AboutSection() {
                   {Object.values(aboutCards)[selectedCard].content}
                 </p>
                 <div className="flex justify-center">
-                  <Link href={Object.values(aboutCards)[selectedCard].link}>
-                    <Button className="bg-[#00D7A3] hover:bg-[#00D7A3]/90 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2">
-                      Read Full Insight
-                      <ArrowRight className="w-4 h-4" />
-                    </Button>
-                  </Link>
+                  <Button
+                    className="bg-[#00D7A3] hover:bg-[#00D7A3]/90 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2"
+                    onClick={() => {
+                      console.debug('[AboutSection] Read Full Insight clicked, navigating to', Object.values(aboutCards)[selectedCard].link);
+                      window.location.href = Object.values(aboutCards)[selectedCard].link;
+                    }}
+                  >
+                    Read Full Insight
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
                 </div>
               </div>
             </motion.div>

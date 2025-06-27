@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, Lightbulb, CheckCircle, Shield, Target } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { InsightArticles } from "@/components/ui/InsightArticles"
 
 export default function VerificationFirstClientPage() {
   return (
