@@ -69,42 +69,78 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-10">
             <button
-              onClick={() => scrollToSection("home")}
+              onClick={() => {
+                if (pathname !== "/") {
+                  router.push("/#home");
+                } else {
+                  scrollToSection("home");
+                }
+              }}
               className="text-gray-700 dark:text-gray-300 hover:text-[#00D7A3] font-medium transition-all duration-300 relative group cursor-pointer"
             >
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00D7A3] transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
-              onClick={() => scrollToSection("about")}
+              onClick={() => {
+                if (pathname !== "/") {
+                  router.push("/#about");
+                } else {
+                  scrollToSection("about");
+                }
+              }}
               className="text-gray-700 dark:text-gray-300 hover:text-[#00D7A3] font-medium transition-all duration-300 relative group cursor-pointer"
             >
               About
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00D7A3] transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
-              onClick={() => scrollToSection("how-it-works")}
+              onClick={() => {
+                if (pathname !== "/") {
+                  router.push("/#how-it-works");
+                } else {
+                  scrollToSection("how-it-works");
+                }
+              }}
               className="text-gray-700 dark:text-gray-300 hover:text-[#00D7A3] font-medium transition-all duration-300 relative group cursor-pointer"
             >
               How It Works
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00D7A3] transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
-              onClick={() => scrollToSection("who-its-for")}
+              onClick={() => {
+                if (pathname !== "/") {
+                  router.push("/#who-its-for");
+                } else {
+                  scrollToSection("who-its-for");
+                }
+              }}
               className="text-gray-700 dark:text-gray-300 hover:text-[#00D7A3] font-medium transition-all duration-300 relative group cursor-pointer"
             >
               Who It's For
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00D7A3] transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
-              onClick={() => scrollToSection("roadmap")}
+              onClick={() => {
+                if (pathname !== "/") {
+                  router.push("/#roadmap");
+                } else {
+                  scrollToSection("roadmap");
+                }
+              }}
               className="text-gray-700 dark:text-gray-300 hover:text-[#00D7A3] font-medium transition-all duration-300 relative group cursor-pointer"
             >
               Roadmap
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00D7A3] transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
-              onClick={() => scrollToSection("pricing")}
+              onClick={() => {
+                if (pathname !== "/") {
+                  router.push("/#pricing");
+                } else {
+                  scrollToSection("pricing");
+                }
+              }}
               className="text-gray-700 dark:text-gray-300 hover:text-[#00D7A3] font-medium transition-all duration-300 relative group cursor-pointer"
             >
               Pricing
