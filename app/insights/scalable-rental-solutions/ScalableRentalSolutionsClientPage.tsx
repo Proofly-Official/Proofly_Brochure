@@ -14,7 +14,7 @@ export default function ScalableRentalSolutionsClientPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20">
+      <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20">
         <div className="container mx-auto max-w-4xl">
           {/* Breadcrumb */}
           <nav className="mb-8">
@@ -44,7 +44,7 @@ export default function ScalableRentalSolutionsClientPage() {
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
                   Scalable Rental Solutions
                 </h1>
-                <p className="text-xl text-blue-600 dark:text-blue-400 mt-2">Beyond Individual Transactions</p>
+                <p className="text-xl text-blue-600 dark:text-blue-400 mt-2">Beyond Individual Rentals</p>
               </div>
             </div>
           </motion.div>
@@ -52,7 +52,7 @@ export default function ScalableRentalSolutionsClientPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Content */}

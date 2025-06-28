@@ -109,7 +109,7 @@ export function HowItWorks() {
   }
 
   return (
-    <section id="how-it-works" className="py-12 md:py-20 px-4 bg-white dark:bg-gray-900">
+    <section id="how-it-works" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

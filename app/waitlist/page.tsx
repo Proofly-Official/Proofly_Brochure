@@ -133,7 +133,7 @@ export default function WaitlistPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] dark:bg-gray-950">
       <Navbar />
-      <div className="container max-w-2xl mx-auto px-4 py-16">
+      <div className="container max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
           id="form"
           initial={{ opacity: 0, y: 20 }}

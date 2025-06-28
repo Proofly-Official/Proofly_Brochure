@@ -145,7 +145,7 @@ export function Roadmap() {
   const currentMilestone = milestones[currentStep - 1]
 
   return (
-    <section id="roadmap" className="py-12 md:py-20 px-4 md:px-6 bg-[#e6ffec] dark:bg-gray-900">
+    <section id="roadmap" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#e6ffec] dark:bg-gray-900">
       <div className="container mx-auto max-w-6xl">
         <div className="flex items-center justify-between mb-8 md:mb-12">
           <div>

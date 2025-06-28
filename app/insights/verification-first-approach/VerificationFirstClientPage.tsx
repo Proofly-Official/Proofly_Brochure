@@ -14,7 +14,7 @@ export default function VerificationFirstClientPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-950/20 dark:to-amber-950/20">
+      <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-950/20 dark:to-amber-950/20">
         <div className="container mx-auto max-w-4xl">
           {/* Breadcrumb */}
           <nav className="mb-8">
@@ -52,7 +52,7 @@ export default function VerificationFirstClientPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Content */}

@@ -63,7 +63,7 @@ export function WhoItsFor() {
   }
 
   return (
-    <section id="who-its-for" className="py-12 md:py-20 px-4 md:px-6 bg-black text-white">
+    <section id="who-its-for" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}

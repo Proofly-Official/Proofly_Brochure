@@ -14,7 +14,7 @@ export default function ThirdPartyVerificationClientPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4 bg-gradient-to-br from-[#00D7A3]/10 to-emerald-50 dark:from-[#00D7A3]/20 dark:to-emerald-950/20">
+      <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#00D7A3]/10 to-emerald-50 dark:from-[#00D7A3]/20 dark:to-emerald-950/20">
         <div className="container mx-auto max-w-4xl">
           {/* Breadcrumb */}
           <nav className="mb-8">
@@ -44,7 +44,7 @@ export default function ThirdPartyVerificationClientPage() {
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
                   Third-Party Verification
                 </h1>
-                <p className="text-xl text-[#00D7A3] mt-2">Unbiased Property Evaluation Network</p>
+                <p className="text-xl text-[#00D7A3] dark:text-[#00D7A3] mt-2">Trust Through Independent Evaluation</p>
               </div>
             </div>
           </motion.div>
@@ -52,7 +52,7 @@ export default function ThirdPartyVerificationClientPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Content */}

@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-20 md:pt-24 pb-12 md:pb-16 px-4 md:px-6 overflow-hidden bg-[#f8f9fa] dark:bg-gray-950"
+      className="relative min-h-screen flex items-center justify-center pt-20 md:pt-24 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#f8f9fa] dark:bg-gray-950"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#f8f9fa] via-[#f8f9fa] to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-800">

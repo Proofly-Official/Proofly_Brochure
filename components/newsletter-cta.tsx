@@ -41,7 +41,7 @@ export function NewsletterCTA() {
   }
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-[#00D7A3]/10 to-blue-500/5 dark:from-gray-900 dark:to-gray-800">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#00D7A3]/10 to-blue-500/5 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto max-w-6xl">
         <div className="relative overflow-hidden rounded-3xl bg-white dark:bg-gray-800 shadow-xl border border-gray-200 dark:border-gray-700">
           {/* Background Elements */}

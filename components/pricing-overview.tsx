@@ -80,7 +80,7 @@ export function PricingOverview() {
   ]
 
   return (
-    <section id="pricing" className="py-12 md:py-20 px-4 bg-gray-50 dark:bg-gray-950">
+    <section id="pricing" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-950">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <motion.div
@@ -104,7 +104,7 @@ export function PricingOverview() {
 
         {/* Horizontal Scrollable Cards - All Screen Sizes */}
         <div className="w-full overflow-x-auto scrollbar-hide pb-4 pt-6">
-          <div className="flex gap-4 md:gap-6 lg:gap-8 min-w-max px-2">
+          <div className="flex gap-4 md:gap-6 lg:gap-8 min-w-max px-4 sm:px-6 lg:px-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
