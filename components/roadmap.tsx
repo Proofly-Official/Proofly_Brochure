@@ -142,6 +142,8 @@ export function Roadmap() {
     return milestone.id === 3 ? "h-auto" : baseHeight
   }
 
+  const currentMilestone = milestones[currentStep - 1]
+
   return (
     <section id="roadmap" className="py-12 md:py-20 px-4 md:px-6 bg-[#e6ffec] dark:bg-gray-900">
       <div className="container mx-auto max-w-6xl">
@@ -244,27 +246,29 @@ export function Roadmap() {
                   <div
                     className={cn(
                       "w-12 h-12 rounded-full flex items-center justify-center text-white",
-                      milestones[currentStep - 1].color,
+                      currentMilestone?.color,
                     )}
                   >
-                    {React.createElement(milestones[currentStep - 1].icon, { className: "w-6 h-6" })}
+                    {currentMilestone && React.createElement(currentMilestone.icon, { className: "w-6 h-6" })}
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                    {milestones[currentStep - 1].title}
+                    {currentMilestone?.title}
                   </h3>
                 </div>
 
-                {milestones[currentStep - 1] && milestones[currentStep - 1].details ? (
-                  <ul className="list-disc pl-5 text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                    {milestones[currentStep - 1] && milestones[currentStep - 1].details && milestones[currentStep - 1].details.map((detail, index) => (
-                      <li key={index}>{detail}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                    {milestones[currentStep - 1] ? milestones[currentStep - 1].description : null}
-                  </p>
-                )}
+                {currentMilestone ? (
+                  currentMilestone.details ? (
+                    <ul className="list-disc pl-5 text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+                      {currentMilestone.details.map((detail, index) => (
+                        <li key={index}>{detail}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+                      {currentMilestone.description}
+                    </p>
+                  )
+                ) : null}
 
                 {currentStep === 3 && (
                   <div className="space-y-6">
@@ -393,7 +397,7 @@ export function Roadmap() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="flex justify-center md:hidden mt-8">
+        <div className="hidden md:flex justify-center mt-8">
           <div className="flex gap-2">
             <Button
               variant="outline"
@@ -422,7 +426,7 @@ export function Roadmap() {
         </div>
 
         {/* Dots Navigation */}
-        <div className="flex justify-center mt-8">
+        <div className="hidden md:flex justify-center mt-8">
           <div className="flex gap-2">
             {milestones.map((milestone) => (
               <button
